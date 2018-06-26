@@ -18,4 +18,4 @@ This repository is the starter code for _all_ Udacity students. Therefore, we mo
 Link to my Repository:
 sixtus-fe-team-402.github.io or
 
-https://github.com/sislinigeria/Pixel-Art-Maker.git
+https://github.com/sislinigeria/Pixel-Art-Maker
