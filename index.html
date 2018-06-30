@@ -1,38 +1,37 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Pixel Art Maker!</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
-    <link rel="stylesheet" href="styles.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<meta charset="UTF-8"> 
+  <title>Pixel Art Maker!</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&text=Pixel%Art%Maker">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Lab: Pixel Art Maker</h1>
-<!-- Add form -->
-    <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
-        Grid Height:
+      <h1> Lab: Pixel Art Maker</h1>
+
+      <h2>Choose Grid Size</h2>
+      <form id="sizePicker">
+       	Grid Height:
         <input type="number" id="input_height" name="height" min="1" value="1">
-        Grid Width:
+		Grid Width:
         <input type="number" id="input_width" name="width" min="1" value="1">
         <input type="submit">
-    </form>
-<!-- Add Color Picker -->
-    <h2>Pick A Color</h2>
-    <input type="color" id="colorPicker">
+      </form>
 	
-    <h2>Design Canvas</h2>
-<!-- Add table -->
+	<h2>Pick A Color</h2>
+	    <input type="color" id="colorPicker">
+	
+	<h2>Design Canvas</h2>
+	<hr>
     <table id="pixelCanvas">
 	
 	</table>
-<!-- Link Javascript file -->
-    <script src="designs.js"></script>
-</body>
 
-<!-- Add Footer -->
+  <script src="designs.js"></script>
+</body>
+<hr>
 <div class="myFooter"><footer>
     <h2>Designed by <em>Sixtus Nnamdi</em></h2>
+    <p><em><strong>This is in fulfilment of the Last Project for the award of Front End Developer Beginner certificate in Udacity, Google, Andela Learning Program.</strong></em></p>
 </footer>
 </div>
 </html>
