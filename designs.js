@@ -1,50 +1,37 @@
+//found about this style of declaring jQery in w3schools.com
+let canvas = document.getElementById("pixelCanvas");
+let height = document.getElementById("input_height");
+let width = document.getElementById("input_width");
+let sizePicker = document.getElementById("sizePicker");
+let color = document.getElementById("colorPicker");
+
 // Select color input
+color.addEventListener("click", function(){});
+
 // Select size input
+sizePicker.onsubmit = function(event){
+    event.preventDefault();
+    clearGrid();
+    makeGrid();
+};
 
 // When size is submitted by the user, call makeGrid()
-
 function makeGrid() {
-	console.log("makeGrid is running!")
-	
-	// Select size input
-	
-	var canvas, cell, gridHeight, gridWidth, rows;
-	
-	canvas = $('#pixelCanvas');
-	gridHeight = $('#input_height').val();
-	gridWidth = $('#input_width').val();
-	
-	canvas.children().remove()
-	
-	for (x = 0; x < gridHeight; x++) {
-	canvas.append('<tr></tr>');
-	}
-	
-	rows = $('tr');
-	
-	for (y = 0; y < gridWidth; y++) {
-	rows.append('<td></td>');
-	} 
-	
-	cell = canvas.find('td');
-	
-	// When td is clicked by the user, change color of td
-	cell.click(function() {
-		// Select color input
-		console.log("changeColor is running!");
-		var color;
-		color = $("#colorPicker").val();
-		$(this).attr('bgcolor', color);
-	});
-	
+    for (let x=0; x<height.value; x++){
+        const row = canvas.insertRow(x);
+        for (let y=0; y<width.value; y++){
+            const cell = row.insertCell(y);
+            cell.addEventListener("click", fillSquare);
+        }
+    }
 }
 
-// When size is submitted by the user, call makeGrid()
-var submitQuery;
+function clearGrid(){
+    while (canvas.firstChild){
+         canvas.removeChild(canvas.firstChild);
+    }
+}
 
-submitQuery = $('input[type="submit"]')
-
-submitQuery.click(function(event) {
-  event.preventDefault();
-  makeGrid();
-});
+function fillSquare () {
+    this.setAttribute("style", `background-color: ${color.value}`);
+}
