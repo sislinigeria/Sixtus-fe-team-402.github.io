@@ -16,7 +16,5 @@ For specific, detailed instructions, look at the project instructions in the [Ud
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
 
 Link to my Repository:
-https://sislinigeria.github.io/Pixel-Art-Maker/
-or
 https://sislinigeria.github.io/Sixtus-fe-team-402.github.io/
 
